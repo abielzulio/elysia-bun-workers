@@ -2,14 +2,16 @@
   "name": "elysia",
   "version": "1.0.50",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler deploy --minify src/index.ts"
   },
   "dependencies": {
     "elysia": "latest"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "@cloudflare/workers-types": "^4.20230904.0",
+    "wrangler": "^3.6.0"
   },
   "module": "src/index.js"
 }
